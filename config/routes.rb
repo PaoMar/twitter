@@ -1,4 +1,9 @@
 Twitter::Application.routes.draw do
+  resources :tweets
+
+  get "sessions/new"
+  post "sessions" => 'sessions#create' #se cambio esta ruta, ya q se habia generado con get
+  get "sessions/destroy"
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   validate :password_confirmation, presence: true
 
+  has_many :tweets
+
 
   #attr_accessor :password, :password_confirmation
 end
